@@ -19,7 +19,7 @@ doc <- htmlTreeParse(fileUrl, useInternal=TRUE)
 scores <- xpathSApply(doc,"//li[@class='score']",xmlValue)
 scores
 
-# Reading JSON
+# Reading JSON ----
 
 install.packages("jsonlite")
 library(jsonlite)
@@ -28,3 +28,14 @@ names(jsonData)
 names (jsonData$owner)
 jsonData$owner$login
 
+# The data.table package ----
+
+install.packages ("data.table")
+library(data.table)
+
+DF=data.frame(x=rnorm(9), y=rep(c("a","b","c"), each=3), z=rnorm(9))
+head(DF,3)
+DT= data.table(x=rnorm(9), y=rep(c("a","b","c"), each=3), z=rnorm(9))
+head(DT,3)
+
+tables()
