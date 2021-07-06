@@ -1,17 +1,6 @@
 ##%######################################################%##
 #                                                          #
 ####    Coursera > Getting and Cleaning Data > Week     ####
-####           2 > Roland Smith > 29 Jun 2021           ####
+####           3 > Roland Smith > 6 Jul 2021            ####
 #                                                          #
 ##%######################################################%##
-
-# Reading from MySQL ----
-
-
-library(RMySQL)
-library(DBI)
-
-ucscDb <- dbConnect(MySQL(),user="genome",
-                    host='genome-mysql.cse.ucsc.edu')
-result <- dbGetQuery(ucscDb,"show databases;"); dbDisconnect(ucscDb);
-result
